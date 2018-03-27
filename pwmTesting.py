@@ -1,5 +1,4 @@
-from tkinter import *
-import _thread
+from Tkinter import *
 import time
 import numpy as np
 import RPi.GPIO as IO
@@ -22,9 +21,10 @@ for i in range(2):
 IO.setwarnings(False);
 IO.setmode(IO.BCM);
 IO.setup(19,IO.OUT);
-pOne = IO.PWM(19,100);
+pOne = IO.PWM(19,200);
 pOne.start(0);
-pTwo = IO.PWM(13,100);
+IO.setup(13,IO.OUT);
+pTwo = IO.PWM(13,200);
 pTwo.start(0);
 
 def updateValues():
