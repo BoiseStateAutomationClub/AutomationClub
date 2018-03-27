@@ -24,7 +24,7 @@ IO.setmode(IO.BCM);
 IO.setup(19,IO.OUT);
 pOne = IO.PWM(19,100);
 pOne.start(0);
-pTwo = IO.PWM(19,100);
+pTwo = IO.PWM(13,100);
 pTwo.start(0);
 
 def updateValues():
