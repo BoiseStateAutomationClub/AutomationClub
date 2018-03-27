@@ -1,2 +1,2 @@
 # AutomationClub
-Repository for BSU Automation Club
+Repository for BSU Automation Club code.
