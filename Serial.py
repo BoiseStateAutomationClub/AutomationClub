@@ -16,12 +16,8 @@ for i in range(1):
   inputs.append(input_)
 
 ser = serial.Serial(
-  
    port='/dev/ttyAMA0',
    baudrate = 9600,
-   parity=serial.PARITY_NONE,
-   stopbits=serial.STOPBITS_ONE,
-   bytesize=serial.EIGHTBITS,
    timeout=1
 )
 counter=0
@@ -29,7 +25,7 @@ counter=0
 def updateValues():
   byte = inputs[0].get();
   ser.write(byte);
-  print(byte);
+  print("" + chr(byte));
 
 button = Button(top, text ="Update", command = updateValues)
 button.grid(row = len(labels), column = 1)
